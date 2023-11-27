@@ -1,4 +1,5 @@
 <?php
+// Conexión con la base de datos
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -12,6 +13,21 @@ if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
 
+// HTML para referenciar estilo css
+?>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcofacts</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+</head>
+
+<body>
+<?php
 /* 
     Consulta 1
     -----------------------------------------------------
@@ -43,9 +59,14 @@ $query2 = "SELECT DISTINCT PAIS
 $resultado2 = $conexion->query($query2);
 
 echo "<h2>Consulta 2: Países con acorazados y cruceros</h2>";
+echo "<div class='tabla'>";
+echo "<table>";
+echo "<tr><th>País</th></tr>";
 while ($fila = $resultado2->fetch_assoc()) {
-    echo "País: " . $fila["PAIS"] . "<br>";
+    echo "<tr><td>" . $fila["PAIS"] . "</td></tr>";
 }
+echo "</table>";
+echo "</div>";
 
 /* 
     Consulta 3
@@ -108,5 +129,17 @@ while ($fila = $resultado5->fetch_assoc()) {
     echo "Batalla: " . $fila["NOMBRE_BATALLA"] . "<br>";
 }
 
+
+
+
+
+
 // Cerrar conexión
 $conexion->close();
+?>
+</body>
+</html>
+
+
+
+
