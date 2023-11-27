@@ -4,11 +4,15 @@ https://es.wikipedia.org/wiki/Categor%C3%ADa:Buques_de_guerra_de_la_Segunda_Guer
 https://es.wikipedia.org/wiki/Categor%C3%ADa:Buques_de_la_Segunda_Guerra_Mundial_del_Reino_Unido
 https://es.wikipedia.org/wiki/Categor%C3%ADa:Acorazados_brit%C3%A1nicos_de_la_Segunda_Guerra_Mundial
 */
-#CREAR BASE DE DATOS
-CREATE SCHEMA `bbdd_barcos` ;
 
 #BORRAR BASE DE DATOS
-DROP DATABASE `bbdd_barcos`;
+DROP DATABASE IF EXISTS bbdd_barcos;
+
+#CREAR BASE DE DATOS
+CREATE DATABASE bbdd_barcos ;
+
+-- USAR LA BASE DE DATOS
+USE bbdd_barcos;
 
 #CREAR TABLAS
 CREATE TABLE BARCOS (
@@ -313,3 +317,42 @@ INSERT INTO RESULTADOS VALUES
     ('SMS EMDEN', 'DE LOS COCOS', 'HUNDIDO'),
     ('IBUKI', 'DE LOS COCOS', 'AVERIADO')
 ;
+
+/* Listar el nombre del barco, desplazamiento y cantidad de cañones, de los barcos que participaron
+en la batalla de Guadalcanal. */
+SELECT bc.NOMBRE_BARCO, cc.NRO_CANIONES, cc.DESPLAZAMIENTO
+FROM BARCO_CLASE bc
+JOIN CLASES cc ON bc.CLASE = cc.CLASE
+JOIN RESULTADOS r ON bc.NOMBRE_BARCO = r.NOMBRE_BARCO
+WHERE r.NOMBRE_BATALLA = 'Guadalcanal';
+
+/* Encontrar aquellos países que dispongan tanto de acorazados como de cruceros. */
+SELECT DISTINCT PAIS FROM CLASES
+	WHERE TIPO IN ('acorazado', 'crucero')
+    GROUP BY PAIS
+    HAVING COUNT(DISTINCT TIPO) = 2;
+
+/* Encontrar aquellas batallas en las cuales un mismo país participó con al menos tres barcos. */
+SELECT DISTINCT r.NOMBRE_BATALLA, c.PAIS, COUNT(DISTINCT r.NOMBRE_BARCO) AS Cantidad_Barcos FROM RESULTADOS r
+JOIN BARCO_CLASE bc ON r.NOMBRE_BARCO = bc.NOMBRE_BARCO
+JOIN CLASES c ON bc.CLASE = c.CLASE
+WHERE c.PAIS IN (
+    SELECT DISTINCT PAIS
+    FROM CLASES
+    WHERE TIPO IN ('acorazado', 'crucero')
+    GROUP BY PAIS
+    HAVING COUNT(DISTINCT TIPO) = 2
+)
+GROUP BY r.NOMBRE_BATALLA, c.PAIS
+HAVING COUNT(DISTINCT r.NOMBRE_BARCO) >= 3;
+
+/* Encontrar los países cuyos barcos tengan el mayor número de cañones. */
+SELECT cc.PAIS, MAX(cc.NRO_CANIONES) AS Max_Cañones FROM CLASES cc
+JOIN BARCO_CLASE bc ON cc.CLASE = bc.CLASE
+JOIN BARCOS b ON bc.NOMBRE_BARCO = b.NOMBRE_BARCO
+GROUP BY cc.PAIS;
+
+/* Encontrar las batallas en las cuales participaron barcos de la clase kongo. */
+SELECT DISTINCT r.NOMBRE_BATALLA FROM RESULTADOS r
+JOIN BARCO_CLASE bc ON r.NOMBRE_BARCO = bc.NOMBRE_BARCO
+WHERE bc.CLASE = 'KONGO';
