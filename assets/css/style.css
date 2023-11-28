@@ -1,9 +1,12 @@
+/* ------------------------------------------*/
+/*                 GENERAL                   */
+/* ------------------------------------------*/
+
 body {
     background-color: #4f4646;
     margin: 0;
     padding: 0;
     font-family: 'Avenir', sans-serif;
-    /* Tipo de letra para el cuerpo del documento */
 }
 
 h2 {
@@ -13,7 +16,9 @@ h2 {
     margin-top: 20px;
 }
 
-/* Resto de tus estilos para la tabla, puedes mantenerlos aquí */
+/* ------------------------------------------*/
+/*                   TABLA                   */
+/* ------------------------------------------*/
 
 .tabla {
     border: 1px solid #00E79F;
@@ -47,7 +52,9 @@ th {
     /* Tipo de letra para los encabezados de la tabla */
 }
 
-/* LOGO */
+/* ------------------------------------------*/
+/*                   LOGO                    */
+/* ------------------------------------------*/
 
 .logo-container {
     text-align: center;
@@ -81,8 +88,26 @@ th {
 /*                 BOTONES                   */
 /* ------------------------------------------*/
 
+/* BOTONES PEGADOS*/
+.pack-cont-botones {
+    position: sticky;
+    top: 0;
+    opacity: 100%;
+    background-color: #4f4646;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    /* Alinea los elementos en el centro horizontalmente */
+    align-items: center;
+    /* Alinea los elementos en el centro verticalmente */
+    padding: 10px;
+    /* Añade algún espacio alrededor de los botones si es necesario */
+}
+
 /* CONTENEDOR DE BOTONES */
-.button-container {
+.contenedor-botones {
     text-align: center;
 }
 
@@ -116,23 +141,4 @@ th {
 
 .boton-volver:hover {
     background: linear-gradient(45deg,#ccaf2e, #bd472a);
-}
-
-/* BOTONES PEGADOS*/
-.botones-pegados {
-    position: sticky;
-    top: 0;
-    opacity: 100%;
-    background-color: #4f4646;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-    display: flex;
-    justify-content: center;
-    /* Alinea los elementos en el centro horizontalmente */
-    align-items: center;
-    /* Alinea los elementos en el centro verticalmente */
-    padding: 10px;
-    /* Añade algún espacio alrededor de los botones si es necesario */
-
 }
