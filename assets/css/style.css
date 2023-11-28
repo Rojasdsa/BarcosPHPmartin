@@ -19,7 +19,7 @@ h2 {
     border: 1px solid #00E79F;
     margin: 0 auto;
     width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 table {
@@ -71,37 +71,57 @@ th {
     z-index: 2;
 }
 
-/* CONTENEDOR BOTONES */
-.envoltura {
-    display: flex;
-    justify-content: center;
-}
+/* ------------------------------------------*/
+/*                 BOTONES                   */
+/* ------------------------------------------*/
 
-.envoltura form button {
-    background-color: #bd472a; /* Color de fondo */
-    color: #c7b2b2; /* Color del texto */
-}
-.envoltura .button-container button:hover {
-    background-color: #583422; /* Cambia el color de fondo al pasar el mouse */
-}
-
-
+/* CONTENEDOR DE BOTONES */
 .button-container {
     text-align: center;
-    margin-top: 20px; /* Ajusta según sea necesario */
+    margin-top: 20px;
 }
 
-.button-container button {
+/* BOTÓN DE CONSULTA */
+.boton-consulta {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #3498db; /* Color de fondo */
-    color: #fff; /* Color del texto */
+    background-color: #3498db;
+    color: #fff;
     border: none;
     border-radius: 5px;
 }
 
-.button-container button:hover {
-    background-color: #2980b9; /* Cambia el color de fondo al pasar el mouse */
+.boton-consulta:hover {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+}
+
+/* BOTÓN VOLVER */
+.boton-volver {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #bd472a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.boton-volver:hover {
+    background: linear-gradient(45deg, #bd472a, #ccaf2e);
+
+    background-color: #583422;
+}
+
+/* MODIFICACIONES POR ID*/
+#botonfondo {
+    margin-bottom: 50px;
+}
+
+/* BOTONES PEGADOS*/
+.botones-pegados{
+    position: sticky;
+    top: 0;
 }

@@ -32,16 +32,19 @@ if ($conexion->connect_error) {
     <!-- LOGO -->
     <div class="logo-container">
         <div class="logo-bar"></div>
-        <img src="assets/img/logo-barcos.png" alt="Old History" class="logo">
+        <img src="assets/img/logo-barcos.png" alt="Old History" class="logo" id="idlogo">
+    </div>
 
-        <!-- BOTONES PARA CONSULTAS -->
+    <!-- BOTONES PARA CONSULTAS -->
+    <div class=botones-pegados>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="button-container">
-                <button type="button" onclick="scrollToConsulta('consulta1')">Consulta 1</button>
-                <button type="button" onclick="scrollToConsulta('consulta2')">Consulta 2</button>
-                <button type="button" onclick="scrollToConsulta('consulta3')">Consulta 3</button>
-                <button type="button" onclick="scrollToConsulta('consulta4')">Consulta 4</button>
-                <button type="button" onclick="scrollToConsulta('consulta5')">Consulta 5</button>
+                <button type="button" onclick="scrollToConsulta('consulta1')" class="boton-consulta">Consulta 1</button>
+                <button type="button" onclick="scrollToConsulta('consulta2')" class="boton-consulta">Consulta 2</button>
+                <button type="button" onclick="scrollToConsulta('consulta3')" class="boton-consulta">Consulta 3</button>
+                <button type="button" onclick="scrollToConsulta('consulta4')" class="boton-consulta">Consulta 4</button>
+                <button type="button" onclick="scrollToConsulta('consulta5')" class="boton-consulta">Consulta 5</button>
+                <button type="button" onclick="scrollToConsulta('idlogo')" class="boton-volver">Volver</button>
             </div>
         </form>
     </div>
@@ -77,14 +80,6 @@ if ($conexion->connect_error) {
 
             $scrollTo = 'consulta1'; // Id del div de la consulta 1
             ?>
-
-            <div class="envoltura">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <div class="button-container">
-                        <button onclick="scrollToTop()" id="scrollToTopBtn">Volver</button>
-                    </div>
-                </form>
-            </div>
         </div>
 
         <div id="consulta2">
@@ -116,14 +111,6 @@ if ($conexion->connect_error) {
 
             $scrollTo = 'consulta2'; // Id del div de la consulta 2
             ?>
-
-            <div class="envoltura">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <div class="button-container">
-                        <button onclick="scrollToTop()" id="scrollToTopBtn">Volver</button>
-                    </div>
-                </form>
-            </div>
         </div>
 
         <div id="consulta3">
@@ -163,14 +150,6 @@ if ($conexion->connect_error) {
 
             $scrollTo = 'consulta3'; // Id del div de la consulta 3
             ?>
-
-            <div class="envoltura">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <div class="button-container">
-                        <button onclick="scrollToTop()" id="scrollToTopBtn">Volver</button>
-                    </div>
-                </form>
-            </div>
         </div>
 
         <div id="consulta4">
@@ -202,14 +181,6 @@ if ($conexion->connect_error) {
 
             $scrollTo = 'consulta4'; // Id del div de la consulta 4
             ?>
-
-            <div class="envoltura">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <div class="button-container">
-                        <button onclick="scrollToTop()" id="scrollToTopBtn">Volver</button>
-                    </div>
-                </form>
-            </div>
         </div>
 
         <div id="consulta5">
@@ -239,14 +210,6 @@ if ($conexion->connect_error) {
 
             $scrollTo = 'consulta5'; // Id del div de la consulta 5
             ?>
-
-            <div class="envoltura">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <div class="button-container">
-                        <button onclick="scrollToTop()" id="scrollToTopBtn">Volver</button>
-                    </div>
-                </form>
-            </div>
         </div>
 
     </div>
