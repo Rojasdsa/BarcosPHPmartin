@@ -24,16 +24,16 @@ include_once("modelo.php");
     </div>
 
     <!-- BOTONES PARA CONSULTAS -->
-    <div class=botones-pegados>
+    <div class=pack-cont-botones>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <div class="button-container">
+            <div class="contenedor-botones">
                 <button type="button" onclick="scrollToConsulta('consulta1')" class="boton-consulta">Consulta 1</button>
                 <button type="button" onclick="scrollToConsulta('consulta2')" class="boton-consulta">Consulta 2</button>
                 <button type="button" onclick="scrollToConsulta('consulta3')" class="boton-consulta">Consulta 3</button>
                 <button type="button" onclick="scrollToConsulta('consulta4')" class="boton-consulta">Consulta 4</button>
                 <button type="button" onclick="scrollToConsulta('consulta5')" class="boton-consulta">Consulta 5</button>
             </div>
-            <div class="button-container">
+            <div class="contenedor-botones">
                 <button type="button" onclick="scrollToConsulta('idlogo')" class="boton-volver">Volver</button>
             </div>
         </form>
