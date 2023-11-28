@@ -30,12 +30,13 @@ table {
 th,
 td {
     border: 1px solid #00E79F;
-    text-align: left;
+    text-align: center;
+    color: #fff;
     padding: 8px;
 }
 
 td {
-    background-color: #d2b863;
+    background-color: #a8a7a5;
     /* Amarillo muy suave solo para el fondo de las celdas */
 }
 
@@ -117,11 +118,6 @@ th {
     background: linear-gradient(45deg,#ccaf2e, #bd472a);
 }
 
-/* MODIFICACIONES POR ID*/
-#botonfondo {
-    margin-bottom: 50px;
-}
-
 /* BOTONES PEGADOS*/
 .botones-pegados {
     position: sticky;
@@ -139,8 +135,4 @@ th {
     padding: 10px;
     /* Añade algún espacio alrededor de los botones si es necesario */
 
-    border-top: none;
-    /* Agrega esta línea para quitar el borde superior */
-
-    box-shadow: 0 10px 30px -15px rgba(255, 255, 255, 0.5);
 }
