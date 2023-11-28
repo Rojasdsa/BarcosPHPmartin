@@ -1,9 +1,9 @@
-
 body {
     background-color: #4f4646;
     margin: 0;
     padding: 0;
-    font-family: 'Avenir', sans-serif; /* Tipo de letra para el cuerpo del documento */
+    font-family: 'Avenir', sans-serif;
+    /* Tipo de letra para el cuerpo del documento */
 }
 
 h2 {
@@ -35,13 +35,15 @@ td {
 }
 
 td {
-    background-color: #d2b863; /* Amarillo muy suave solo para el fondo de las celdas */
+    background-color: #d2b863;
+    /* Amarillo muy suave solo para el fondo de las celdas */
 }
 
 th {
     background-color: #333;
     color: #fff;
-    font-family: 'Halis Grotesque', sans-serif; /* Tipo de letra para los encabezados de la tabla */
+    font-family: 'Halis Grotesque', sans-serif;
+    /* Tipo de letra para los encabezados de la tabla */
 }
 
 /* LOGO */
@@ -49,8 +51,9 @@ th {
 .logo-container {
     text-align: center;
     position: relative;
-    padding: 20px; /* Ajusta según sea necesario */
-    
+    padding: 20px;
+    /* Ajusta según sea necesario */
+
 }
 
 .logo-bar {
@@ -61,13 +64,15 @@ th {
     top: 0;
     left: 0;
     z-index: 1;
-    border-bottom-right-radius: 600px; /* Ajusta según sea necesario */
+    border-bottom-right-radius: 600px;
+    /* Ajusta según sea necesario */
 }
 
 .logo {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative; /* Ajuste aquí */
+    position: relative;
+    /* Ajuste aquí */
     z-index: 2;
 }
 
@@ -78,7 +83,6 @@ th {
 /* CONTENEDOR DE BOTONES */
 .button-container {
     text-align: center;
-    margin-top: 20px;
 }
 
 /* BOTÓN DE CONSULTA */
@@ -87,14 +91,14 @@ th {
     margin: 5px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #3498db;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
     color: #fff;
     border: none;
     border-radius: 5px;
 }
 
 .boton-consulta:hover {
-    background: linear-gradient(45deg, #3498db, #2ecc71);
+    background: linear-gradient(45deg, #2ecc71, #3498db);
 }
 
 /* BOTÓN VOLVER */
@@ -103,16 +107,14 @@ th {
     margin: 5px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #bd472a;
+    background: linear-gradient(45deg, #bd472a, #ccaf2e);
     color: #fff;
     border: none;
     border-radius: 5px;
 }
 
 .boton-volver:hover {
-    background: linear-gradient(45deg, #bd472a, #ccaf2e);
-
-    background-color: #583422;
+    background: linear-gradient(45deg,#ccaf2e, #bd472a);
 }
 
 /* MODIFICACIONES POR ID*/
@@ -121,7 +123,24 @@ th {
 }
 
 /* BOTONES PEGADOS*/
-.botones-pegados{
+.botones-pegados {
     position: sticky;
     top: 0;
+    opacity: 100%;
+    background-color: #4f4646;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    /* Alinea los elementos en el centro horizontalmente */
+    align-items: center;
+    /* Alinea los elementos en el centro verticalmente */
+    padding: 10px;
+    /* Añade algún espacio alrededor de los botones si es necesario */
+
+    border-top: none;
+    /* Agrega esta línea para quitar el borde superior */
+
+    box-shadow: 0 10px 30px -15px rgba(255, 255, 255, 0.5);
 }
