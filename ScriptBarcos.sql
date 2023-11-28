@@ -4,15 +4,17 @@ https://es.wikipedia.org/wiki/Categor%C3%ADa:Buques_de_guerra_de_la_Segunda_Guer
 https://es.wikipedia.org/wiki/Categor%C3%ADa:Buques_de_la_Segunda_Guerra_Mundial_del_Reino_Unido
 https://es.wikipedia.org/wiki/Categor%C3%ADa:Acorazados_brit%C3%A1nicos_de_la_Segunda_Guerra_Mundial
 */
-
-#BORRAR BASE DE DATOS
+#BORRAR BASE DE DATOS SI EXISTE
 DROP DATABASE IF EXISTS bbdd_barcos;
 
 #CREAR BASE DE DATOS
 CREATE DATABASE bbdd_barcos ;
 
--- USAR LA BASE DE DATOS
+#USAR BASE DE DATOS
 USE bbdd_barcos;
+
+#BORRAR BASE DE DATOS
+DROP DATABASE `bbdd_barcos`;
 
 #CREAR TABLAS
 CREATE TABLE BARCOS (
