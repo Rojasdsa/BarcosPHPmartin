@@ -20,6 +20,11 @@ h2 {
 /*                   TABLA                   */
 /* ------------------------------------------*/
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
 .tabla {
     border: 1px solid #00E79F;
     margin: 0 auto;
@@ -27,11 +32,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
+/* Propiedades en común de th y td */
 th,
 td {
     border: 1px solid #00E79F;
@@ -40,16 +41,15 @@ td {
     padding: 8px;
 }
 
-td {
-    background-color: #a8a7a5;
-    /* Amarillo muy suave solo para el fondo de las celdas */
-}
-
+/* Propiedades exclusivas de th y td */
 th {
     background-color: #333;
     color: #fff;
     font-family: 'Halis Grotesque', sans-serif;
-    /* Tipo de letra para los encabezados de la tabla */
+}
+
+td {
+    background-color: #a8a7a5;
 }
 
 /* ------------------------------------------*/
@@ -60,8 +60,6 @@ th {
     text-align: center;
     position: relative;
     padding: 20px;
-    /* Ajusta según sea necesario */
-
 }
 
 .logo-bar {
@@ -73,14 +71,12 @@ th {
     left: 0;
     z-index: 1;
     border-bottom-right-radius: 600px;
-    /* Ajusta según sea necesario */
 }
 
 .logo {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
-    /* Ajuste aquí */
     z-index: 2;
 }
 
@@ -96,14 +92,10 @@ th {
     background-color: #4f4646;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
     display: flex;
     justify-content: center;
-    /* Alinea los elementos en el centro horizontalmente */
     align-items: center;
-    /* Alinea los elementos en el centro verticalmente */
     padding: 10px;
-    /* Añade algún espacio alrededor de los botones si es necesario */
 }
 
 /* CONTENEDOR DE BOTONES */
@@ -140,5 +132,5 @@ th {
 }
 
 .boton-volver:hover {
-    background: linear-gradient(45deg,#ccaf2e, #bd472a);
+    background: linear-gradient(45deg, #ccaf2e, #bd472a);
 }
